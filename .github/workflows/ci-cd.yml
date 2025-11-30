@@ -47,6 +47,7 @@ jobs:
       run : gitleaks detect source . -r gitleaks-report.json -f json
   test:
     runs-on: self-hosted
+    needs: compile
 
     steps:
     - uses: actions/checkout@v4
